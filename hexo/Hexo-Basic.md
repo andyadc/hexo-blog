@@ -123,7 +123,7 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
     - 还是让 Git Bash 保持在 E:\git_work_space\hexo 目录下，然后输入命令：`git clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee`
     - 这样就在 D:\Workspace\blog\hexo\themes 目录下生成了一个 yelle 文件夹，里面有我们刚刚 clone 下来的主题内容。
     - 如果以后你不自己修改这个主题的话，可以考虑经常更新下作者的更新内容：
-        - `cd e:/Workspace/blog/hexo/themes/yelee`
+        - `cd D:/Workspace/blog/hexo/themes/yelee`
         - `git pull origin master`
 - 下载好主题文件之后，我们现在要修改 E:\git_work_space\hexo 目录下的项目配置文件：**\_config.yml**，把对应的主题目录名改下，编辑如下图。
     - ![修改主题目录](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/hexo-modify-theme.png)
@@ -257,7 +257,7 @@ deploy:
         - ![确认提交](http://img.youmeek.com/2016/hexo-start-d-1.jpg)
     - 提交成功效果如下：
         - ![提交成功](http://img.youmeek.com/2016/hexo-start-d-2.jpg)
-    - 访问服务器地址进行检查：<http://judasn.github.io>，效果如下
+    - 访问服务器地址进行检查：<http://andyadc.github.io>，效果如下
         - ![服务器效果](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/hexo-server-preview.png)
     - 但是，也不排除你 deploy 不了到 Github，报这个错误：`Host key verification failed`，那解决办法如下：
         - 还是在 Git Bash 界面中，输入如下命令：`ssh -T git@github.com`，根据界面提示，输入：`yes` 回车。之后你可以再试一下是否可以 deploy。
@@ -280,8 +280,8 @@ deploy:
     - <https://help.github.com/articles/setting-up-an-apex-domain/>
     - <https://help.github.com/articles/troubleshooting-custom-domains/>
     - <https://help.github.com/articles/custom-domain-redirects-for-github-pages-sites/>
-- 首先我们要一个 CNAME 文件（文件名叫 CNAME，没有文件后缀的），把该文件放在 E:\git_work_space\hexo\source 目录下，以后一些需要放在根目录的资源文件都可以放这里。如果你找不到这样的文件可以到我的项目上下载：<https://github.com/judasn/judasn.github.io>
-    - CNAME 上的内容需要写你具体要绑定的域名信息，比如我是：**code.youmeek.com**，具体你可以参考下图：
+- 首先我们要一个 CNAME 文件（文件名叫 CNAME，没有文件后缀的），把该文件放在 D:\Workspace\blog\hexo\source 目录下，以后一些需要放在根目录的资源文件都可以放这里。如果你找不到这样的文件可以到我的项目上下载：<https://github.com/judasn/judasn.github.io>
+    - CNAME 上的内容需要写你具体要绑定的域名信息，比如我是：**blog.andyadc.com**，具体你可以参考下图：
         - ![设置 CNAME 文件](http://img.youmeek.com/2016/hexo-start-e-1.jpg)
 - 接着我们需要到 DNSPOD 上设置域名解析：<https://www.dnspod.cn/>
     - ![设置域名解析](http://img.youmeek.com/2016/hexo-start-e-2.jpg)
