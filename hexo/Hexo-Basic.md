@@ -1,5 +1,5 @@
 ﻿---
-title: 使用 Github 空间搭建 Hexo 技术博客--安装篇
+title: 使用 Github 空间搭建 Hexo 技术博客
 date: 2016-12-11 18:10:07
 description: "如何搭建 Hexo 博客、写博客！"
 categories: [Hexo]
