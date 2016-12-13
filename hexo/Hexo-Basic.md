@@ -120,12 +120,12 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 - 我这里选择的 **yelee**：<https://github.com/MOxFIVE/hexo-theme-yelee>
     - 原因是能最大化衬托出：目录、文章内容、代码块。因为我对这个博客的定位就是用来放技术类内容，所以不会让它太杂或是太花。只是目前这个颜色偏浅，后续还需要调整。
 - 现在假设你跟我要用的模板是一样：
-    - 还是让 Git Bash 保持在 E:\git_work_space\hexo 目录下，然后输入命令：`git clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee`
+    - 还是让 Git Bash 保持在 D:\Workspace\blog\hexo 目录下，然后输入命令：`git clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee`
     - 这样就在 D:\Workspace\blog\hexo\themes 目录下生成了一个 yelle 文件夹，里面有我们刚刚 clone 下来的主题内容。
     - 如果以后你不自己修改这个主题的话，可以考虑经常更新下作者的更新内容：
         - `cd D:/Workspace/blog/hexo/themes/yelee`
         - `git pull origin master`
-- 下载好主题文件之后，我们现在要修改 E:\git_work_space\hexo 目录下的项目配置文件：**\_config.yml**，把对应的主题目录名改下，编辑如下图。
+- 下载好主题文件之后，我们现在要修改 D:\Workspace\blog\hexo 目录下的项目配置文件：**\_config.yml**，把对应的主题目录名改下，编辑如下图。
     - ![修改主题目录](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/hexo-modify-theme.png)
 - 更改主题目录名后，我们还要重新生成主题静态内容：
     - 继续在 Git Bash 中输入命令：
@@ -137,12 +137,12 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 
 ### 创建 Github pages 并 SSH 授权
 
-- 现在假设你已经有一个 Gtihub 账号，你还需要一个特别的仓库，特别在仓库名就是你的 Github 账号登录名，比如我的用户名是：judasn，那我要创建的仓库名字完整滴填写是：andyadc.github.io，具体效果如下图。
-    - ![创建 github pages](http://img.youmeek.com/2016/hexo-start-c-1.jpg)
+- 现在假设你已经有一个 Gtihub 账号，你还需要一个特别的仓库，特别在仓库名就是你的 Github 账号登录名，比如我的用户名是：andyadc，那我要创建的仓库名字完整滴填写是：andyadc.github.io，具体效果如下图。
+    - ![创建 github pages](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/create-gitpages-repository.png)
 - 创建好仓库之后，要本地生成 SSH 秘钥，方便电脑上的 git 软件好提交内容到 Github 上
     - 在 Git Bash 中，输入：`ssh-keygen -t rsa -C "你的邮箱地址"`，然后回车，回车，再回车，一共 3 次回车，具体含义自己 Google。
     - 比如我的：`ssh-keygen -t rsa -C "andaicheng@gmail.com"`，生成后效果如下图：
-    - ![生成 ssh 密钥](http://img.youmeek.com/2016/hexo-start-c-2.jpg)
+    - ![生成 ssh 密钥](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/ssh-keygen.png)
     - 此时，生成密钥后，在你电脑目录：C:\Users\你的计算机用户名\\.ssh 下，会生成两个文件：
         - 私钥：**id_rsa**
         - 公钥：**id_rsa.pub**
@@ -151,7 +151,7 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
         - 访问：<https://github.com/settings/ssh>，添加新秘钥，效果如下图
             - Title：自己随便取
             - Key：把刚刚复制的都粘贴进来
-            - ![添加密钥](http://img.youmeek.com/2016/hexo-start-c-3.jpg)
+            - ![添加密钥](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/github-add-ssh-keys.png)
 
 
 ### 把本地的博客内容同步到 Github 上
@@ -170,17 +170,17 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 ## Source: https://github.com/hexojs/hexo/
 
 # Site，这一块区域主要是设置博客的主要说明，需要注意的是：每个冒号后面都是有一个空格，然后再书写自己的内容的
-title: YouMeek Code
-subtitle: 这里只有代码相关，要了解更多 >>> YouMeek.com
-description: 这里是 YouMeek.com 一部分
-author: Judas.n
-email: 363379444@qq.com
+title: Andy Code
+subtitle: Andy's Blog
+description: xxxx
+author: Andy An
+email: andaicheng@gmail.com
 language: zh-CN
 timezone:
 
 # URL，这一块一般可以设置的是 url 这个参数，比如我要设置绑定域名的，这里就需要填写我的域名信息
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://code.youmeek.com
+url: http://blog.andyadc.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -239,7 +239,7 @@ theme: yelee
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:judasn/judasn.github.io.git
+  repo: git@github.com:andyadc/andyadc.github.io.git
   branch: master
   
 ```
@@ -254,9 +254,9 @@ deploy:
         - `git config --global user.email "你的 Github 注册邮箱地址"`
         - `git config --global user.name "你的 Github 用户名"`
     - 使用部署命令部署到 Github 上：`hexo deploy`，有弹出下面提示框，请输入：`yes`
-        - ![确认提交](http://img.youmeek.com/2016/hexo-start-d-1.jpg)
+        - ![确认提交](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/hexo-git-deploy-confirm.png)
     - 提交成功效果如下：
-        - ![提交成功](http://img.youmeek.com/2016/hexo-start-d-2.jpg)
+        - ![提交成功](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/hexo-git-deploy.png)
     - 访问服务器地址进行检查：<http://andyadc.github.io>，效果如下
         - ![服务器效果](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/hexo-server-preview.png)
     - 但是，也不排除你 deploy 不了到 Github，报这个错误：`Host key verification failed`，那解决办法如下：
@@ -280,14 +280,14 @@ deploy:
     - <https://help.github.com/articles/setting-up-an-apex-domain/>
     - <https://help.github.com/articles/troubleshooting-custom-domains/>
     - <https://help.github.com/articles/custom-domain-redirects-for-github-pages-sites/>
-- 首先我们要一个 CNAME 文件（文件名叫 CNAME，没有文件后缀的），把该文件放在 D:\Workspace\blog\hexo\source 目录下，以后一些需要放在根目录的资源文件都可以放这里。如果你找不到这样的文件可以到我的项目上下载：<https://github.com/judasn/judasn.github.io>
+- 首先我们要一个 CNAME 文件（文件名叫 CNAME，没有文件后缀的），把该文件放在 D:\Workspace\blog\hexo\source 目录下，以后一些需要放在根目录的资源文件都可以放这里。如果你找不到这样的文件可以到我的项目上下载：<https://github.com/andyadc/andyadc.github.io>
     - CNAME 上的内容需要写你具体要绑定的域名信息，比如我是：**blog.andyadc.com**，具体你可以参考下图：
-        - ![设置 CNAME 文件](http://img.youmeek.com/2016/hexo-start-e-1.jpg)
-- 接着我们需要到 DNSPOD 上设置域名解析：<https://www.dnspod.cn/>
-    - ![设置域名解析](http://img.youmeek.com/2016/hexo-start-e-2.jpg)
-    - ![设置域名解析](http://img.youmeek.com/2016/hexo-start-e-3.jpg)
+        - ![设置 CNAME 文件](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/add-cname.png)
+- 接着我们需要到 阿里云 上设置域名解析
+    - ![设置域名解析](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/github-pages-domain-resolution.png)
+    
 - 设置好之后，等过几分钟域名解析好之后，我们访问：<http://blog.andyadc.com>，效果如下：    
-    - ![域名访问效果](http://img.youmeek.com/2016/hexo-start-e-4.jpg)
+    - ![域名访问效果](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/domain-resolution-success.png)
 	- Github 提示，建议我们使用 CNAME 方式来指向，别用 IP，所以建议你这样配置，还是以我的为例：
 		- 主机记录：blog
 		- 记录类型：CNAME
