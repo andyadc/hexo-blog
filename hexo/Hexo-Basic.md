@@ -256,7 +256,7 @@ deploy:
     - 使用部署命令部署到 Github 上：`hexo deploy`，有弹出下面提示框，请输入：`yes`
         - ![确认提交](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/hexo-git-deploy-confirm.png)
     - 提交成功效果如下：
-        - ![提交成功](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/hexo-git-deploy.png)
+        - ![提交成功](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/hexo-git-deploy-success.png)
     - 访问服务器地址进行检查：<http://andyadc.github.io>，效果如下
         - ![服务器效果](http://andyadc-image.oss-cn-shanghai.aliyuncs.com/blog-hexo-image/hexo-server-preview.png)
     - 但是，也不排除你 deploy 不了到 Github，报这个错误：`Host key verification failed`，那解决办法如下：
